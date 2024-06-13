@@ -1,0 +1,37 @@
+/* remove a barra de scroll */
+.carrosel-itens > div::-webkit-scrollbar { 
+    display: none;
+}
+
+.category > .carrosel-itens > button { 
+    height: 300px;
+}
+
+/* remove os botões do slider */
+/* .carrosel-itens:has(.details) > .cursor-pointer { display: none; } */
+
+
+.carrosel-itens > div { 
+    overflow-x: scroll;
+    overflow-y: clip;
+}
+
+.carrosel-itens > div:has(.details) { 
+    padding-bottom: 7rem;
+    /* padding-left: 75px; */ /* o botão está sumindo? */
+    /*transition: padding-bottom 0.5s ease-in-out;*/
+}
+
+/* remove os botôes em uma tela com sem mouse */
+@media screen and (hover: none) { 
+    .carrosel-itens > div.cursor-pointer {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .category > .carrosel-itens > button { 
+        height: 230px;
+    }
+}
